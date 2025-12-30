@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/incognito"
+        android:scaleType="centerCrop" />
+    <!-- Імʼя -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_marginStart="10dp"
+        android:text="Імʼя чату"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+    <!-- Час -->
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="14:35"
+        android:textSize="12sp"
+        android:textColor="#888888" />
+
+    <!-- Останнє повідомлення -->
+    <TextView
+        android:id="@+id/last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_toEndOf="@id/avatar"
+        android:layout_marginStart="10dp"
+        android:text="Останнє повідомлення"
+        android:textColor="#888888"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp" />
+
+    <!-- Непрочитані повідомлення -->
+    <TextView
+        android:id="@+id/unread_count"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/time"
+        android:background="@drawable/circle_blue"
+        android:text="2"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- Статус повідомлення (галочки) -->
+    <ImageView
+        android:id="@+id/status_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignBottom="@id/last_message"
+        android:layout_toEndOf="@id/last_message"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_check"
+        android:visibility="gone" />
+</LinearLayout>
