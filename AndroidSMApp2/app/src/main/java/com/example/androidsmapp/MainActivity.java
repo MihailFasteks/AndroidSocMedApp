@@ -18,7 +18,7 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Дані для списку
+        
         List<Map<String, Object>> chats = new ArrayList<>();
 
         Map<String, Object> chat1 = new HashMap<>();
@@ -42,7 +42,7 @@ public class MainActivity extends ListActivity {
         chats.add(chat2);
 
 
-        // SimpleAdapter
+        
         String[] from = {"avatar", "name", "last_message", "time", "unread_count", "is_sent", "is_read"};
         int[] to = {R.id.avatar, R.id.name, R.id.last_message, R.id.time, R.id.unread_count, 0, 0};
 
@@ -68,7 +68,7 @@ public class MainActivity extends ListActivity {
 
             @Override
             public void setViewImage(android.widget.ImageView v, String value) {
-                // Для простоти не використовуємо URL, бо SimpleAdapter не підтримує Glide
+               
             }
 
             @Override
